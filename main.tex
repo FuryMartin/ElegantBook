@@ -1,0 +1,20 @@
+\documentclass[lang=cn,newtx,10pt,scheme=chinese,chinesefont=founder]{elegantbook}
+
+% 封面设置 %
+\input{contents/settings.tex}
+
+\begin{document}
+
+% 封面及目录 %
+\maketitle \frontmatter \tableofcontents \mainmatter
+
+% 正文 %
+% \input{contents/example.tex}
+\input{contents/1.tex}
+
+% 参考文献 %
+\printbibliography[heading=bibintoc, title=\ebibname]
+
+% 附录 %
+\input{contents/appendix.tex}
+\end{document}
