@@ -1,0 +1,167 @@
+{
+	// Place your ElegantBook 工作区 snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+// 环境相关
+	"定义":{
+		"prefix": "\\definition",
+		"body": [
+			"\\begin{definition}{$1}{def:$1}",
+			"\t$2",
+			"\\end{definition}"
+		]
+	},
+	"定理":{
+		"prefix": "\\theorem",
+		"body": [
+			"\\begin{theorem}{$1}{thm:$1}",
+			"\t$2",
+			"\\end{theorem}"
+		]
+	},
+	"公理":{
+		"prefix": "\\postulate",
+		"body": [
+			"\\begin{postulate}{$1}{pos:$1}",
+			"\t$2",
+			"\\end{postulate}"
+		]
+	},
+	"命题":{
+		"prefix": "\\proposition",
+		"body": [
+			"\\begin{proposition}{$1}{pro:$1}",
+			"\t$2",
+			"\\end{proposition}"
+		]
+	},
+	"推论":{
+		"prefix": "\\corollary",
+		"body": [
+			"\\begin{corollary}{$1}{cor:$1}",
+			"\t$2",
+			"\\end{corollary}"
+		]
+	},
+	"解": {
+		"prefix": "\\solution",
+		"body": [
+			"\\begin{solution}",
+			"\t$1",
+			"\\end{solution}"
+		]
+	},
+	"练习": {
+		"prefix": "\\exercise",
+		"body": [
+			"\\begin{exercise}",
+			"\t$1",
+			"\\end{exercise}"
+		]
+	},
+	"笔记": {
+		"prefix": "\\note",
+		"body": [
+			"\\begin{note}",
+			"\t$1",
+			"\\end{note}"
+		]
+	},
+	"结论": {
+		"prefix": "\\conclusion",
+		"body": [
+			"\\begin{conclusion}",
+			"\t$1",
+			"\\end{conclusion}"
+		]
+	},
+	"习题": {
+		"prefix": "\\problemset",
+		"body": [
+			"\\begin{problemset}",
+			"\t$1",
+			"\\end{problemset}"
+		]
+	},
+	"性质": {
+		"prefix": "\\property",
+		"body": [
+			"\\begin{property}",
+			"\t$1",
+			"\\end{property}"
+		]
+	},
+	"图表": {
+		"prefix": "\\figure",
+		"body": [
+			"\\begin{figure}[htbp]",
+			"\t\\centering",
+			"\t\\includegraphics[width=0.6\\textwidth]{${3:filename}}",
+			"\t\\caption{${1:title} \\label{fig:${2:lable}}",
+			"\\end{figure}"
+		]
+	},
+
+	// 注释
+	"line": {
+		"prefix": "line",
+		"body": [
+			"",
+			"% ------------------------------------------------------------------------ %",
+			""
+		]
+	},
+	"comment": {
+		"prefix": "comment",
+		"body": [
+			"",
+			"% $1 %",
+		]
+	},
+
+	// 自定义字符
+	"大括号": {
+		"prefix": "\\big{",
+		"body": [
+			"\\left\\{\\begin{aligned}",
+			"\t$1",
+			"\\end{aligned}\\right."
+		]
+	},
+	"自然常数e":{
+		"prefix": "\\e",
+		"body": "\\mathrm{e}",
+		"description": "自然常数e"
+	},
+	"一阶微分": {
+		"prefix": "\\dydx",
+		"body": [
+			"\\frac{\\mathrm{d}$1}{\\mathrm{d}$2}"
+		],
+		"description": "微分"
+	},
+	"二阶微分": {
+		"prefix": "\\d2ydx2",
+		"body": [
+			"\\frac{\\mathrm{d}^2$1}{\\mathrm{d}$2^2}"
+		],
+		"description": "微分"
+	},
+	"jw": {
+		"prefix": "\\jw",
+		"body": "\\mathrm{j}\\omega $1",
+		"description": "复数"
+	},
+	"复数j": {
+		"prefix": "\\j",
+		"body": "\\mathrm{j}"
+	},
+	"复矢量Z":{
+		"prefix": ["~Z","~z"],
+		"body": "\\tilde{Z}"
+	}
+}
