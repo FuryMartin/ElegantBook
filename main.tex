@@ -1,7 +1,8 @@
-\documentclass[lang=cn,newtx,10pt,scheme=chinese,chinesefont=founder]{elegantbook}
+\documentclass[lang=cn,newtx,10pt,scheme=chinese,chinesefont=founder,citestyle=gb7714-2015, bibstyle=gb7714-2015]{elegantbook}
 
 % 封面设置 %
 \input{contents/settings.tex}
+\input{contents/newcommand.tex}
 
 \begin{document}
 
@@ -13,6 +14,7 @@
 \input{contents/1.tex}
 
 % 参考文献 %
+\nocite{*}
 \printbibliography[heading=bibintoc, title=\ebibname]
 
 % 附录 %

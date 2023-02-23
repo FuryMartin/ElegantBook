@@ -6,43 +6,47 @@
 	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
 	// Placeholders with the same ids are connected.
 	// Example:
-// 环境相关
-	"定义":{
+	// 环境相关
+	"行内公式": {
+		"prefix": "$",
+		"body": "$$1$"
+	},
+	"定义": {
 		"prefix": "\\definition",
 		"body": [
-			"\\begin{definition}{$1}{def:$1}",
+			"\\begin{definition}{$1}{$1}",
 			"\t$2",
 			"\\end{definition}"
 		]
 	},
-	"定理":{
+	"定理": {
 		"prefix": "\\theorem",
 		"body": [
-			"\\begin{theorem}{$1}{thm:$1}",
+			"\\begin{theorem}{$1}{$1}",
 			"\t$2",
 			"\\end{theorem}"
 		]
 	},
-	"公理":{
+	"公理": {
 		"prefix": "\\postulate",
 		"body": [
-			"\\begin{postulate}{$1}{pos:$1}",
+			"\\begin{postulate}{$1}{$1}",
 			"\t$2",
 			"\\end{postulate}"
 		]
 	},
-	"命题":{
+	"命题": {
 		"prefix": "\\proposition",
 		"body": [
-			"\\begin{proposition}{$1}{pro:$1}",
+			"\\begin{proposition}{$1}{$1}",
 			"\t$2",
 			"\\end{proposition}"
 		]
 	},
-	"推论":{
+	"推论": {
 		"prefix": "\\corollary",
 		"body": [
-			"\\begin{corollary}{$1}{cor:$1}",
+			"\\begin{corollary}{$1}{$1}",
 			"\t$2",
 			"\\end{corollary}"
 		]
@@ -101,17 +105,16 @@
 			"\\begin{figure}[htbp]",
 			"\t\\centering",
 			"\t\\includegraphics[width=0.6\\textwidth]{${3:filename}}",
-			"\t\\caption{${1:title} \\label{fig:${2:lable}}",
+			"\t\\caption{${1:title} \\label{fig:${1:lable}}}",
 			"\\end{figure}"
 		]
 	},
-
 	// 注释
 	"line": {
 		"prefix": "line",
 		"body": [
 			"",
-			"% ------------------------------------------------------------------------ %",
+			"% ---------------------- %",
 			""
 		]
 	},
@@ -122,7 +125,6 @@
 			"% $1 %",
 		]
 	},
-
 	// 自定义字符
 	"大括号": {
 		"prefix": "\\big{",
@@ -132,7 +134,7 @@
 			"\\end{aligned}\\right."
 		]
 	},
-	"自然常数e":{
+	"自然常数e": {
 		"prefix": "\\e",
 		"body": "\\mathrm{e}",
 		"description": "自然常数e"
@@ -160,8 +162,12 @@
 		"prefix": "\\j",
 		"body": "\\mathrm{j}"
 	},
-	"复矢量Z":{
-		"prefix": ["~Z","~z"],
+	"~Z": {
+		"prefix": "~Z",
 		"body": "\\tilde{Z}"
+	},
+	"罗马字体": {
+		"prefix": "@rm",
+		"body": "\\mathrm{$1}"
 	}
 }
